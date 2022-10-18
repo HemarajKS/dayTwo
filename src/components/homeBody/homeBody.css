@@ -116,3 +116,68 @@
     padding: 3em 0;
     max-width: 400px;
 }
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.cardUpper {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardContents {
+    width: 363px;
+    background-color: #ffffff;
+    border-radius: 1em;
+    padding: 12px 20px;
+}
+
+.cardUpper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cardCopy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+}
+
+.cardTitle {
+    color: #0e85ff;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 27px;
+    padding-bottom: 6px;
+}
+
+.cardCopy div {
+    color: #0e85ff;
+    font-size: 12.6px;
+    letter-spacing: 0;
+    line-height: 17px;
+}
+
+.cardLink {
+    color: #3c4857;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 22px;
+    text-align: center;
+    background-color: #f5f7fb65;
+    width: 363px;
+    position: relative;
+    border: radius;
+    border-radius: 0 0 15px 15px;
+    margin-left: -19.7px;
+    margin-bottom: -12px;
+    padding: 12px 0;
+}

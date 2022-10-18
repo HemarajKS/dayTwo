@@ -2,9 +2,61 @@ import './homeBody.css'
 import { useState, useEffect } from 'react'
 
 const HomeBody = () => {
-  const [userData, setUserData] = useState([])
-
   const data = [
+    {
+      siteName: 'Facebook',
+      url: 'www.facebook.com',
+      sector: 'Social Media',
+      userName: 'ssmraok',
+      sitePassword: 'abcdXYZ',
+      notes: '',
+      icon: require(`../../assets/icons/Facebook.png`),
+    },
+    {
+      siteName: 'YouTube',
+      url: 'www.youtube.com',
+      sector: 'Social Media',
+      userName: 'ssmraok',
+      sitePassword: 'abcd123',
+      notes: '',
+      icon: require(`../../assets/icons/YouTube.png`),
+    },
+    {
+      siteName: 'Linkdin',
+      url: 'www.linkdin.com',
+      sector: 'Social Media',
+      userName: 'ssmraok',
+      sitePassword: 'abcd123',
+      notes: '',
+      icon: require(`../../assets/icons/LinkdIn.png`),
+    },
+    {
+      siteName: 'Facebook',
+      url: 'www.facebook.com',
+      sector: 'Social Media',
+      userName: 'ssmraok',
+      sitePassword: 'abcdXYZ',
+      notes: '',
+      icon: require(`../../assets/icons/Facebook.png`),
+    },
+    {
+      siteName: 'YouTube',
+      url: 'www.youtube.com',
+      sector: 'Social Media',
+      userName: 'ssmraok',
+      sitePassword: 'abcd123',
+      notes: '',
+      icon: require(`../../assets/icons/YouTube.png`),
+    },
+    {
+      siteName: 'Linkdin',
+      url: 'www.linkdin.com',
+      sector: 'Social Media',
+      userName: 'ssmraok',
+      sitePassword: 'abcd123',
+      notes: '',
+      icon: require(`../../assets/icons/LinkdIn.png`),
+    },
     {
       siteName: 'Facebook',
       url: 'www.facebook.com',
@@ -74,16 +126,43 @@ const HomeBody = () => {
               <div>Please Click on the “+” symbol to add sites</div>
             </div>
           ) : (
-            previousData.map((ele: any) => {
-              return (
-                <div key={ele.siteName}>
-                  <div className="cardContainer">
-                    <img src={ele.icon} alt="" />
-                    {ele.siteName}
+            <div className="cardContainer">
+              {previousData.map((ele: any) => {
+                return (
+                  <div key={ele.siteName} className="cardContents">
+                    <div className="cardUpper">
+                      <div className="cardLogo">
+                        {' '}
+                        {ele.icon !== '' ? (
+                          <img src={ele.icon} alt="" />
+                        ) : (
+                          <img
+                            src={require('../../assets/icons/logo (2).png')}
+                            height="50px"
+                            style={{
+                              backgroundPosition: 'cover',
+                              borderRadius: '50%',
+                            }}
+                          />
+                        )}
+                      </div>
+
+                      <div className="cardCopyTitle">
+                        <div className="cardTitle"> {ele.siteName}</div>
+                        <div className="cardCopy">
+                          <img
+                            src={require('../../assets/icons/copy.png')}
+                            alt="copy"
+                          />
+                          <div>Copy Password</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="cardLink">{ele.url}</div>
                   </div>
-                </div>
-              )
-            })
+                )
+              })}
+            </div>
           )}
         </div>
       </div>
