@@ -19,7 +19,20 @@ const HomeBody = () => {
           </div>
         </div>
       </div>
-      <div className="homeBodyContents">Body</div>
+      <div className="homeBodyCount">
+        <div className="socialMedia">Social Media</div>
+        <div className="socialMediaCount">07</div>
+        <div className="socialMediaDropDown">
+          <img src={require('../../assets/icons/Path Copy.png')} alt="add" />
+        </div>
+      </div>
+      <div className="homeBodyContainerBox">
+        <div className="homeBodyContents">
+          <div className="homeBodyEmpty">
+            <div>Please Click on the “+” symbol to add sites</div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

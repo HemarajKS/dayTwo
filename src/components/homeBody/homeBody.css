@@ -1,6 +1,7 @@
 .homeBody {
     margin-top: 8rem;
     margin-left: 8rem;
+    position: relative;
 }
 
 .homeBodyContainer {
@@ -50,4 +51,68 @@
     font-size: 18px;
     letter-spacing: 0;
     line-height: 24px;
+}
+
+.homeBodyContents {
+    padding-top: 32px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeBodyCount {
+    padding-top: 32px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.socialMedia {
+    color: #3c4857;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 33px;
+}
+
+.socialMediaCount {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 27px;
+}
+
+.socialMediaCount {
+    height: 37px;
+    width: 37px;
+    border: 1px solid #ffffff;
+    background-color: #0e85ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.homeBodyEmpty {
+    border-radius: 500px;
+    background-color: #f5f7fb;
+    width: 819px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 300px;
+}
+
+.homeBodyEmpty div {
+    color: #3c4857;
+    font-size: 26px;
+    letter-spacing: 0;
+    line-height: 36px;
+    text-align: center;
+    padding: 3em 0;
+    max-width: 400px;
 }
