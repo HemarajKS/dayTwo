@@ -1,6 +1,44 @@
 import './homeBody.css'
+import { useState, useEffect } from 'react'
 
 const HomeBody = () => {
+  const [userData, setUserData] = useState([])
+
+  const data = [
+    {
+      siteName: 'Facebook',
+      url: 'www.facebook.com',
+      sector: 'Social Media',
+      userName: 'ssmraok',
+      sitePassword: 'abcdXYZ',
+      notes: '',
+    },
+    {
+      siteName: 'YouTube',
+      url: 'www.youtube.com',
+      sector: 'Social Media',
+      userName: 'ssmraok',
+      sitePassword: 'abcd123',
+      notes: '',
+    },
+    {
+      siteName: 'Linkdin',
+      url: 'www.linkdin.com',
+      sector: 'Social Media',
+      userName: 'ssmraok',
+      sitePassword: 'abcd123',
+      notes: '',
+    },
+  ]
+
+  if (localStorage.getItem('user Data') === null) {
+    localStorage.setItem('user Data', JSON.stringify(data))
+  }
+
+  const previousData = JSON.parse(localStorage.getItem('user Data') || '[]')
+
+  console.log(previousData)
+
   return (
     <div className="homeBodyContainer">
       <div className="homeBodyHeader">
@@ -28,9 +66,13 @@ const HomeBody = () => {
       </div>
       <div className="homeBodyContainerBox">
         <div className="homeBodyContents">
-          <div className="homeBodyEmpty">
-            <div>Please Click on the “+” symbol to add sites</div>
-          </div>
+          {JSON.stringify(previousData) === '[]' ? (
+            <div className="homeBodyEmpty">
+              <div>Please Click on the “+” symbol to add sites</div>
+            </div>
+          ) : (
+            'hii'
+          )}
         </div>
       </div>
     </div>
