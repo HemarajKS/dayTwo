@@ -7,6 +7,7 @@
     box-sizing: border-box;
     margin: 0;
     font-family: 'Open Sans';
+    transition: all 0.5s ease;
 }
 
 body {
@@ -27,6 +28,7 @@ body {
     --mainMargin: 0 12%;
     --activeOrange: #ffa043;
     --backgroundClr: #f5f7fb;
+    --blackFont: #3c4857;
 }
 
 input[type='password']::-ms-reveal,

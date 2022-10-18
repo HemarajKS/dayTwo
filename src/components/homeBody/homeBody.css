@@ -1,4 +1,53 @@
 .homeBody {
     margin-top: 8rem;
-    margin-left: 4rem;
+    margin-left: 8rem;
+}
+
+.homeBodyContainer {
+    padding: 3em 5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.homeBodyHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerBodyTitle {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 41px;
+    border-bottom: 3px solid #ffa136;
+    border-radius: 2px;
+    color: var(--blackFont);
+    width: 32px;
+}
+
+.headerBodyOptions {
+    display: flex;
+    gap: 38px;
+}
+
+.headerSearch {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.searchbarIcn {
+    position: absolute;
+    right: 0;
+}
+
+.searchbar {
+    outline: none;
+    border-bottom: 1px solid #0e85ff;
+    border-width: 0 0 1px 0;
+    background: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 24px;
 }
