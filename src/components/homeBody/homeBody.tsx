@@ -12,6 +12,7 @@ const HomeBody = () => {
       userName: 'ssmraok',
       sitePassword: 'abcdXYZ',
       notes: '',
+      icon: require(`../../assets/icons/Facebook.png`),
     },
     {
       siteName: 'YouTube',
@@ -20,6 +21,7 @@ const HomeBody = () => {
       userName: 'ssmraok',
       sitePassword: 'abcd123',
       notes: '',
+      icon: require(`../../assets/icons/YouTube.png`),
     },
     {
       siteName: 'Linkdin',
@@ -28,10 +30,11 @@ const HomeBody = () => {
       userName: 'ssmraok',
       sitePassword: 'abcd123',
       notes: '',
+      icon: require(`../../assets/icons/LinkdIn.png`),
     },
   ]
 
-  if (localStorage.getItem('user Data') === null) {
+  if (localStorage.getItem('user Data') === null || 'undefined') {
     localStorage.setItem('user Data', JSON.stringify(data))
   }
 
@@ -59,7 +62,7 @@ const HomeBody = () => {
       </div>
       <div className="homeBodyCount">
         <div className="socialMedia">Social Media</div>
-        <div className="socialMediaCount">07</div>
+        <div className="socialMediaCount">{previousData.length}</div>
         <div className="socialMediaDropDown">
           <img src={require('../../assets/icons/Path Copy.png')} alt="add" />
         </div>
@@ -71,7 +74,16 @@ const HomeBody = () => {
               <div>Please Click on the “+” symbol to add sites</div>
             </div>
           ) : (
-            'hii'
+            previousData.map((ele: any) => {
+              return (
+                <div key={ele.siteName}>
+                  <div className="cardContainer">
+                    <img src={ele.icon} alt="" />
+                    {ele.siteName}
+                  </div>
+                </div>
+              )
+            })
           )}
         </div>
       </div>

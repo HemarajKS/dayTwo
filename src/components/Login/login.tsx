@@ -10,6 +10,21 @@ const Login = () => {
     setTogglePass(!togglePass)
   }
 
+  if (localStorage.getItem('users') === null) {
+    localStorage.setItem(
+      'user Data',
+      JSON.stringify(
+        localStorage.setItem(
+          'users',
+          JSON.stringify([
+            { mobileNo: '9945810342', mPin: '9945' },
+            { mobileNo: '9945810341', mPin: '9945' },
+          ]),
+        ),
+      ),
+    )
+  }
+
   const loginHandler = (e: any) => {
     e.preventDefault()
     type usersType = { mobileNo: number; mPin: number }

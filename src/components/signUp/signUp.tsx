@@ -7,6 +7,22 @@ const SignUp = () => {
   type usersType = { mobileNo: number; mPin: number }
   const [togglePass, setTogglePass] = useState(false)
   const navigate = useNavigate()
+
+  if (localStorage.getItem('users') === null) {
+    localStorage.setItem(
+      'user Data',
+      JSON.stringify(
+        localStorage.setItem(
+          'users',
+          JSON.stringify([
+            { mobileNo: '9945810342', mPin: '9945' },
+            { mobileNo: '9945810341', mPin: '9945' },
+          ]),
+        ),
+      ),
+    )
+  }
+
   const togglePassword = () => {
     setTogglePass(!togglePass)
   }
@@ -50,13 +66,6 @@ const SignUp = () => {
       console.log('pre', previousData)
       localStorage.setItem('users', JSON.stringify(previousData))
     } else if ((previousData.length = 0 && mobileNo)) {
-      localStorage.setItem(
-        'users',
-        JSON.stringify([
-          { mobileNo: '9945810342', mPin: '9945' },
-          { mobileNo: '9945810341', mPin: '9945' },
-        ]),
-      )
     }
   }
 
