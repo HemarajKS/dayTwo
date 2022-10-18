@@ -11,7 +11,11 @@ const SideBar = () => {
           />
         </div>
         <div className="homeIcon">
-          <img src={require('../../assets/icons/home_icn.png')} alt="" />
+          <img
+            src={require('../../assets/icons/home_icn.png')}
+            alt="home icon"
+          />
+          <div className="homeSelected"></div>
         </div>
       </div>
     </div>

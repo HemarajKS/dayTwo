@@ -11,7 +11,7 @@
 
 body {
     min-height: 100vh;
-    background-color: #f5f7fb;
+    background-color: #fafafa;
 }
 
 :root {
@@ -25,6 +25,8 @@ body {
     --successGreenFont: #2ecc71;
     --sideBarBlue: #2892ff;
     --mainMargin: 0 12%;
+    --activeOrange: #ffa043;
+    --backgroundClr: #f5f7fb;
 }
 
 input[type='password']::-ms-reveal,
